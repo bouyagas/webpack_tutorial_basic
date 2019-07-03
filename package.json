@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --port=3000 --inline --hot"
+    "start": "webpack-dev-server --port=3000 --inline --hot",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Harry Ganz <hganz@harryganz.com>",
   "license": "MIT",
@@ -22,6 +24,8 @@
     "react-dom": "^15.3.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
-  }
+    "webpack-dev-server": "^1.16.2",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
